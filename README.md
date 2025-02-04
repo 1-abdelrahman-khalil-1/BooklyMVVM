@@ -13,6 +13,7 @@ A Flutter application following the MVVM (Model-View-ViewModel) architecture pat
 - **Error Handling**: Provides error messages for failed API calls.
 - **Dependency Injection**: Uses `get_it` for managing dependencies.
 - **Animations**: Implements animations in the splash screen.
+- **Book Preview**: Uses `url_launcher` to open book previews in a web browser.
 ## Technologies Used
 
 - **Flutter** (Dart)
