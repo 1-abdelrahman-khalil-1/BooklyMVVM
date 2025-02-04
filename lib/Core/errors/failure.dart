@@ -19,7 +19,7 @@ class ServerFailure extends Failure {
       case DioExceptionType.badCertificate:
         return ServerFailure("Ops BadCertificate");
       case DioExceptionType.badResponse:
-        return ServerFailure.fromResponse(dio.response!.statusCode, dio.response);
+        return ServerFailure.fromResponse(dio.response!.statusCode, dio.response!.data);
       case DioExceptionType.cancel:
         return ServerFailure("Request was canceled");
       case DioExceptionType.connectionError:

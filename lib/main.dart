@@ -4,6 +4,8 @@ import 'package:bookly/Features/DetailsForBook/Data/repo/detailsrepoImplentation
 import 'package:bookly/Features/DetailsForBook/presentation/cubit/detailscubit.dart';
 import 'package:bookly/Features/Home/presentation/cubit/cubit.dart';
 import 'package:bookly/Features/Home/Data/repo/homerepoimplement.dart';
+import 'package:bookly/Features/Search/Data/repo/searchrepoImpl.dart';
+import 'package:bookly/Features/Search/presentation/cubit/searchcubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -40,6 +42,10 @@ class MainApp extends StatelessWidget {
               BlocProvider<SimilarBooksCubit>(
                   create: (context) => SimilarBooksCubit(
                      get_it.get<Detailsrepoimplentation>())),
+
+              BlocProvider<Searchcubit>(
+                create: (context) => Searchcubit(get_it.get<Searchrepoimpl>()),
+              )       
             ],
             child: MaterialApp.router(
               debugShowCheckedModeBanner: false,
