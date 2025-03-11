@@ -52,13 +52,12 @@ lib/
 ```
 
 ## Screenshots
-![Screenshot 2025-02-04 050356splash](https://github.com/user-attachments/assets/bf9e4666-06dc-4977-8440-4cb4aee950e1)
+<img src = "https://github.com/user-attachments/assets/bf9e4666-06dc-4977-8440-4cb4aee950e1" width = 300 height = 500 alt = "Screenshot">
 
+<img src = "https://github.com/user-attachments/assets/c379d7d1-debf-41d4-8cc8-e5d159ab9498" width = 300 height = 500 alt = "Screenshot">
 
-![Screenshot 2025-02-04 051056](https://github.com/user-attachments/assets/c379d7d1-debf-41d4-8cc8-e5d159ab9498)
+<img src = "https://github.com/user-attachments/assets/40c87650-2283-49c9-a860-c67b5a2d66ce" width = 300 height = 500 alt = "Screenshot">
 
-
-![Screenshot 2025-02-03 222433](https://github.com/user-attachments/assets/40c87650-2283-49c9-a860-c67b5a2d66ce)
 
 ## Contribution
 
