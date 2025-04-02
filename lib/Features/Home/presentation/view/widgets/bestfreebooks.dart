@@ -21,13 +21,13 @@ class Bestfreebooks extends StatelessWidget {
            context.push( AppRouter.detailsforbook );
       },
       child: Padding(
-        padding: const EdgeInsets.all(8.0),
+        padding: EdgeInsets.all(8.w),
         child: SizedBox(
           height: 130.h,
          
           child: Row(
             children: [
-             MYImagewidget(imageurl:  booklist.volumeInfo?.imageLinks!.thumbnail ,width:  80 ,height:  130) ,
+             MYImagewidget(imageurl: booklist.volumeInfo?.imageLinks!.thumbnail, width: 80.w, height: 130.h),
              Detailsforeverybestfree(booklist: booklist),
         
             ],

@@ -25,14 +25,14 @@ class _SimilarbookbodyState extends State<Similarbookbody> {
         itemCount: widget.similarbooks.length,
         itemBuilder: (context, index) {
           return Padding(
-            padding: const EdgeInsets.all(8.0),
+            padding: EdgeInsets.all(8.w),
             child: GestureDetector(
               onTap: () {               
                 BlocProvider.of<SimilarBooksCubit>(context).getSimilarBooks(title: widget.similarbooks[index].volumeInfo!.title!);
                 BlocProvider.of<Detailscubit>(context).getDetailsForBook(title: widget.similarbooks[index].volumeInfo!.title!);
                 context.push(AppRouter.detailsforbook);
                  },
-              child: MYImagewidget(imageurl:  widget.similarbooks[index].volumeInfo?.imageLinks?.thumbnail ,width:  90,height:  145)),
+              child: MYImagewidget(imageurl: widget.similarbooks[index].volumeInfo?.imageLinks?.thumbnail, width: 90.w, height: 145.h)),
           );
         },
       ),

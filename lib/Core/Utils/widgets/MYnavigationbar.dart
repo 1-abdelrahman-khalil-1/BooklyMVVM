@@ -12,15 +12,16 @@ class MYnavigationbar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Positioned(
-      left: 150,
-      right: 150,
+      left: 130,
+      right: 130,
       bottom: 30, 
       child: ClipRRect(
         borderRadius: BorderRadius.circular(24.r),
         child: BackdropFilter(
           filter: ImageFilter.blur(sigmaX: 10, sigmaY: 10),
           child: Container(
-            height: 50,
+            height: 50.h,
+            
             decoration: BoxDecoration(
               color: Colors.white.withOpacity(0.3),
               backgroundBlendMode: BlendMode.srcOver, // Transparent background
@@ -33,10 +34,10 @@ class MYnavigationbar extends StatelessWidget {
                   onPressed: (){
                     context.go(AppRouter.homekey);
                   },
-                 icon: Icon(Icons.home , size: 30.w, color: Colors.white,)),
+                 icon: Icon(Icons.home, size: 30.w, color: Colors.white)),
                 IconButton(
                   onPressed: (){},
-                  icon: Icon(Icons.bookmark , size: 30.w,color: Colors.white,)),
+                  icon: Icon(Icons.bookmark, size: 30.w, color: Colors.white)),
               ],
             ),
           ),

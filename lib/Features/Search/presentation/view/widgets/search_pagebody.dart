@@ -14,7 +14,7 @@ class SearchPagebody extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-           CustomTextField(),
+           const CustomTextField(),
           const SizedBox(
             height: 16,
           ),

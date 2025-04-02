@@ -14,7 +14,7 @@ class Detailsandpreviewbody extends StatelessWidget {
       
       children: [
         MYImagewidget(
-           imageurl: details.volumeInfo?.imageLinks?.thumbnail,width:  150,height:  230),
+           imageurl: details.volumeInfo?.imageLinks?.thumbnail, width: 150.w, height: 230.h),
 
         Text("\n${details.volumeInfo?.title}" ,style: MyTextStyle.bookplusStyle18.copyWith(fontSize: 16.sp),textAlign: TextAlign.center),
         Text("\n${details.volumeInfo?.authors?.join(", ")}\n" ,style: MyTextStyle.meriendaStyle18.copyWith(color: Colors.white70) ,textAlign: TextAlign.center),

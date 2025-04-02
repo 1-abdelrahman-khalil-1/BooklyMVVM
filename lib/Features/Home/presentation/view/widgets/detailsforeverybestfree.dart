@@ -12,7 +12,7 @@ class Detailsforeverybestfree extends StatelessWidget {
     return SizedBox(
       width: 200.w,
       child: Padding(
-        padding: const EdgeInsets.only(left: 30),
+        padding: EdgeInsets.only(left: 30.w),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,

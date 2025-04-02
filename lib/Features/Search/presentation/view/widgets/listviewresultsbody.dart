@@ -14,7 +14,7 @@ class Listviewresultsbody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.all(8.0),
+      padding: EdgeInsets.all(8.w),
       child: GestureDetector(
         onTap: () {
           BlocProvider.of<Detailscubit>(context).getDetailsForBook(title: bookresult.volumeInfo!.title!);
@@ -27,8 +27,8 @@ class Listviewresultsbody extends StatelessWidget {
             children: [
               MYImagewidget(
                   imageurl: bookresult.volumeInfo?.imageLinks?.thumbnail,
-                  width: 80,
-                  height: 130),
+                  width: 80.w,
+                  height: 130.h),
               Detailsforeveryresult(
                 bookresult: bookresult,
               ),

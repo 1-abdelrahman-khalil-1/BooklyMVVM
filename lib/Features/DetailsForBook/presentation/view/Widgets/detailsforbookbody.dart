@@ -9,18 +9,20 @@ class Detailsforbookbody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Padding(
-    padding: const EdgeInsets.symmetric(horizontal: 10),
-      child: Column( 
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-         
-          const Detailsandpreview(),
-          SizedBox(height: 20.h),
-          Align(alignment: Alignment.topLeft,child: Text("You can also like" , style: MyTextStyle.style18bold.copyWith(fontWeight: FontWeight.normal ,color: Colors.white),)) , 
-          SizedBox(height: 10.h),
-          const Similarbooks()
-        ],
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 10.w),
+      child: SingleChildScrollView(
+        child: Column( 
+          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+          children: [
+           
+            const Detailsandpreview(),
+            SizedBox(height: 20.h),
+            Align(alignment: Alignment.topLeft,child: Text("You can also like" , style: MyTextStyle.style18bold.copyWith(fontWeight: FontWeight.normal ,color: Colors.white),)) , 
+            SizedBox(height: 10.h),
+            const Similarbooks()
+          ],
+        ),
       ),
     );
   }

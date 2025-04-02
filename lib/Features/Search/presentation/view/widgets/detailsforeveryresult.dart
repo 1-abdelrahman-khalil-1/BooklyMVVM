@@ -12,7 +12,7 @@ class Detailsforeveryresult extends StatelessWidget {
     return SizedBox(
       width: 200.w,
       child: Padding(
-        padding: const EdgeInsets.only(left: 30),
+        padding: EdgeInsets.only(left: 30.w),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -23,7 +23,7 @@ class Detailsforeveryresult extends StatelessWidget {
               maxLines: 3,
             ),
     
-             Text("${bookresult.volumeInfo!.authors?.join(" , ")}" , style:TextStyle(color: Colors.white70),
+             Text("${bookresult.volumeInfo!.authors?.join(" , ")}" , style:const TextStyle(color: Colors.white70),
               overflow: TextOverflow.ellipsis,
               maxLines: 2,
             ),

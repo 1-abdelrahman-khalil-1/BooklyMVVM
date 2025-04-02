@@ -22,8 +22,9 @@ class CustomTextField extends StatelessWidget {
         
       ),
       onChanged: (value) {
-        if(value.isNotEmpty)
-        BlocProvider.of<Searchcubit>(context).getresults(key: value);
+        if(value.isNotEmpty) {
+          BlocProvider.of<Searchcubit>(context).getresults(key: value);
+        }
         }
     );
   }

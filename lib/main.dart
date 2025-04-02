@@ -6,13 +6,27 @@ import 'package:bookly/Features/Home/presentation/cubit/cubit.dart';
 import 'package:bookly/Features/Home/Data/repo/homerepoimplement.dart';
 import 'package:bookly/Features/Search/Data/repo/searchrepoImpl.dart';
 import 'package:bookly/Features/Search/presentation/cubit/searchcubit.dart';
+import 'package:device_preview/device_preview.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setSystemUIOverlayStyle(
+    const SystemUiOverlayStyle(
+      statusBarColor: Colors.transparent,
+      statusBarIconBrightness: Brightness.light,
+    ),
+  );
   Setupservicelocator();
-  runApp(const MainApp());
+runApp( 
+  DevicePreview(
+    enabled: !kReleaseMode ,
+    builder: (context) => const MainApp(),
+  ));
 }
 
 class MainApp extends StatelessWidget {
@@ -20,9 +34,10 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-
     return ScreenUtilInit(
         designSize: const Size(360, 690),
+        minTextAdapt: true,
+        splitScreenMode: true,
         builder: (context, child) {
           return MultiBlocProvider(
             providers: [
@@ -48,6 +63,8 @@ class MainApp extends StatelessWidget {
               )       
             ],
             child: MaterialApp.router(
+              locale: DevicePreview.locale(context),
+              builder: DevicePreview.appBuilder,
               debugShowCheckedModeBanner: false,
               theme: ThemeData.dark().copyWith(
                   scaffoldBackgroundColor: const Color.fromRGBO(16, 11, 32, 1)),
